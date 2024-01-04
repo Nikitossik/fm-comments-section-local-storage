@@ -1,0 +1,77 @@
+.form {
+  background-color: #fff;
+  border-radius: 0.5rem;
+}
+
+.form--reply {
+  margin: -0.5rem 0 1rem;
+}
+
+@media screen and (min-width: 40em) {
+  .form--reply {
+    margin: -0.5rem 0 1.25rem;
+  }
+}
+
+.form-inner {
+  display: flex;
+  align-items: start;
+
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.form--send .form-inner {
+  padding: 1rem;
+  justify-content: space-between;
+}
+
+@media screen and (min-width: 40em) {
+  .form--send .form-inner {
+    padding: 1.5rem;
+  }
+}
+
+.form--update .form-inner {
+  padding: 0;
+  justify-content: flex-end;
+}
+
+.form-textarea {
+  border-radius: 0.5rem;
+  border: 1px solid var(--clr-light-gray);
+  background: #fff;
+  color: var(--clr-dark-blue);
+  padding: 0.75rem 1.5rem;
+  min-height: 6rem;
+  flex: 1 1 100%;
+  resize: none;
+}
+
+.form-textarea:focus {
+  /* outline-offset: 2px; */
+  outline: solid 0.25rem var(--clr-primary-hover);
+}
+
+.form-textarea::-webkit-scrollbar-thumb {
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.form--update .form-textarea {
+  min-height: 7.75rem;
+}
+
+@media screen and (min-width: 40em) {
+  .form--send .form-textarea {
+    flex: 1 1 auto;
+    order: 2;
+  }
+
+  .form--send .form__avatar {
+    order: 1;
+  }
+  .form--send .form__button {
+    order: 3;
+  }
+}
